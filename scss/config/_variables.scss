@@ -3,7 +3,7 @@
 // ==========================================================================
 
 $font-size         : 1.6rem;
-$font-primary      : 'Josefin', sans-serif;
+$font-primary      : 'Josefin Sans', sans-serif;
 $font-icon         : 'iconFont'; 
 
 $weights: (
@@ -19,12 +19,14 @@ $weights: (
 
 $colors: (
    primary: (
-      base     : #001B3D,
-      dark     : #002646
+      base        : #EE3348,
+      dark        : #b32737,
+      background_c  : #FEF6F3
    ),
    secondary: (
-      base     : #FFA20D,
-      dark     : rgb(83, 46, 0)
+      shadow   : #FFD7C8,
+      grey_1   : #989393,
+      grey_2   : #C4C4C4
    ),
    complementary: (
       one      : #001B3D,
@@ -33,16 +35,6 @@ $colors: (
       four     : #004EFF,
       five     : #FF0000,
       six      : #FF6C00
-   ),
-   alerts: (
-      sucess   : #28A745,
-      error    : #DC3545,
-      warning  : #FFC100,
-      info     : #0074FC
-   ),
-   controls:(
-      base     : #0074FC,
-      dark     : #0056B3,
    ),
    grayscale: (
       white    : #ffffff,
@@ -55,10 +47,6 @@ $colors: (
       gray-7   : #4A4A4A,
       base     : #1b1b1b,
       black    : #000000
-   ),
-   border:(
-      color-1  : #ced4da,
-      color-2  : #999999
    )
 );
 
@@ -73,6 +61,7 @@ $sizes: (
    base_2 : 1.8rem,     // 18px
    thumb  : 2rem,       // 20px
    half   : 2.4rem,     // 24px
+   toggle : 3rem,       // 30px
    medium : 3.6rem,     // 36px
    slarge : 4.38rem,    // 43px
    large  : 4.8rem,     // 48px

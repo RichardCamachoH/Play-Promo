@@ -9,153 +9,203 @@
     <title>Play Promo</title>
 </head>
 <body>
-    <header>
-
+    <header class="header">
+        <nav class="header__navbar">
+            <a href="#" class="header__logo">
+                <img src="images/katyPerryPlayBlanco.png" alt="Katy Perry" width="219" height="23.5">
+            </a>
+            <div class="header__toggle"><i class="icon-bars"></i></div>
+            <ul class="header__list menu-hidden">
+                <li class="header__item">
+                    <a href="#">
+                        <p>HOME</p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#">
+                        <p>MUSICA</p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#">
+                        <p>VIDEOS</p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#">
+                        <p>SHOWS</p>
+                    </a>
+                </li>
+                <li class="header__item">
+                    <a href="#">
+                        <p>TIENDA</p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <!-- VIDEO -->
-        <section>
-            <nav>
-                <a href="">
-                    <img src="images/katyPerryPlayBlanco.png" alt="Katy Perry" width="219" height="23.5">
-                </a>
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <p>HOME</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>MUSICA</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>VIDEOS</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>SHOWS</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <p>TIENDA</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </section>
-        <!-- VIDEO -->
-        <section>
+        <section class="video">
             <div>
-                <video src="videos/videoPromoDesktop.webm" preload="none" type="video/webm"></video>
+                <video preload="none" width="375" height="200" controls poster="/images/background_1.jpg">
+                    <source src="videos/videoPromoDesktop.mp4" type="video/mp4">
+                </video>
             </div>
         </section>
         <!-- BANNER PROMO -->
-        <section>
+        <section class="promo-banner">
             <div>
-                <img src="images/KP-PLAY-MMOBILE.jpg" alt="Katy Perry PLAY banner" width="375" height="490">
-                <img src="images/KP-PLAY.jpg" alt="Katy Perry PLAY banner" width="1240" height="370">
-                <div>
+                <picture>
+                    <source media="(min-width: 720px)" srcset="images/KP-PLAY.jpg">
+                    <source media="(min-width: 375px)" srcset="images/KP-PLAY-MMOBILE.jpg">
+                    <source media="(max-width: 375px)" srcset="images/KP-PLAY-MMOBILE.jpg">
+                    <img src="images/KP-PLAY.jpg" alt="Katy Perry PLAY banner">
+                </picture>
+                <div class="promo-banner__text">
                     <h1>PLAY! OFERTAS EXCLUSIVAS</h1>
                     <a href="#">VER MÁS...</a>
                 </div>
             </div>
         </section>
         <!-- VIDEOS -->
-        <section>
+        <section class="videos">
             <div>
-                <h2>Videos</h2>
-                <a href="">Ver más <i class="icon-chevron-right" aria-hidden="true"></i></a>
-                <img src="images/all-you-need-is-love-video.jpg" alt="All you need is love, Video en Youtube" width="337" height="190">
-                <img src="images/electric-video.jpg" alt="Electric, Video en Youtube" width="337" height="190">
-            </div>
-            <aside>
-                <p>NUEVO LANZAMIENTO 29 de diciembre</p>
-                <img src="images/bannerWIG.png" alt="When i'm gone" width="300" height="40">
-                <img src="images/promoWIG.jpg" alt="Alesso & Katy Perry When i'm gone" width="300" height="296">
-                <div>
-                    <a href="#">
-                        <i class="icon-apple" aria-hidden="true"></i>
+                <div class="videos__header">
+                    <h2>Videos</h2>
+                    <a href=""> <span class="">Ver más</span> <i class="icon-chevron-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="videos__thumbnail">
+                    <a href="">
+                        <img src="images/all-you-need-is-love-video.jpg" alt="All you need is love, Video en Youtube" width="337" height="190">
                     </a>
-                    <a href="#">
-                        <i class="icon-apotify" aria-hidden="true"></i>
+                    <a href="">
+                        <img src="images/electric-video.jpg" alt="Electric, Video en Youtube" width="337" height="190">
                     </a>
                 </div>
-                <a href="#">RESERVA LA CANCIÓN</a>
-            </aside>
+            </div>
         </section>
+        <aside class="lanzamiento">
+            <p>NUEVO LANZAMIENTO 29 de diciembre</p>
+            <img src="images/bannerWIG.png" alt="When i'm gone" >
+            <img src="images/promoWIG.jpg" alt="Alesso & Katy Perry When i'm gone">
+            
+            <div class="lanzamiento__links">
+                <a href="#">
+                    <i class="icon-apple" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="icon-spotify" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="lanzamiento__reserva">
+                <a href="#" class="btn btn-primary">RESERVA LA CANCIÓN</a>
+            </div>
+        </aside>
         <!-- MUSICA -->
-        <section>
-            <div>
+        <section class="musica">
+            <div class="musica__header">
                 <h2>Música</h2>
                 <a href="#">Ver más <i class="icon-chevron-right" aria-hidden="true"></i></a>
             </div>
-            <!-- inputs para el slider -->
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <div>
-                <div>
-                    <img src="images/desktop-smile.jpg" alt="Album Smile" width="375" height="967">
-                    <p>Último lanzamiento SMILE</p>
-                </div>
-                <div>
-                    <img src="images/desktop-witness.jpg" alt="Album Witness" width="375" height="967">
-                    <p>Witness</p>
-                </div>
-                <div>
-                    <img src="images/desktop-prism.jpg" alt="Album Prism" width="375" height="967">
-                    <p>PRISM</p>
-                </div>
-                <div>
-                    <img src="images/desktop-teenage-dream.jpg" alt="Album Teenage Dream" width="375" height="967">
-                    <p>Teenage Dream</p>
-                </div>
-                <div>
-                    <img src="images/desktop-unplugged.jpg" alt="Album MTV unplugged" width="375" height="967">
-                    <p>MTV unplugged</p>
-                </div>
-                <div>
-                    <img src="images/desktop-one-of-the-boys.jpg" alt="Album One OF the Boys" width="375" height="967">
-                    <p>One Of the Boys</p>
+            
+            <div class="musica__slider">
+                <!-- inputs para el slider -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <input type="radio" name="radio-btn" id="radio5">
+                <input type="radio" name="radio-btn" id="radio6">
+
+                <ul class="musica__item-list">
+                    <li class="musica__item">
+                        <picture>
+                            <source media="(min-width: 720px)" srcset="images/desktop-smile.jpg">
+                            <source media="(min-width: 375px)" srcset="images/mobile-smile.jpg">
+                            <img src="images/desktop-smile.jpg" alt="Album Smile">
+                        </picture>
+                        <p>Último lanzamiento SMILE</p>
+                    </li>
+                    <li class="musica__item">
+                        <picture>
+                            <source media="(min-width: 720px)" srcset="images/desktop-witness.jpg">
+                            <source media="(min-width: 375px)" srcset="images/mobile-witness.jpg">
+                            <img src="images/desktop-witness.jpg" alt="Album Witness">
+                        </picture>
+                        <p>Witness</p>
+                    </li>
+                    <li class="musica__item">
+                        <picture>
+                            <source media="(min-width: 720px)" srcset="images/desktop-prism.jpg">
+                            <source media="(min-width: 375px)" srcset="images/mobile-prism.jpg">
+                            <img src="images/desktop-prism.jpg" alt="Album Prism">
+                        </picture>
+                        <p>PRISM</p>
+                    </li>
+                    <li class="musica__item">
+                        <picture>
+                            <source media="(min-width: 720px)" srcset="images/desktop-teenage-dream.jpg">
+                            <source media="(min-width: 375px)" srcset="images/mobile-teenage-dream.jpg">
+                            <img src="images/desktop-teenage-dream.jpg" alt="Album Teenage Dream">
+                        </picture>
+                        <p>Teenage Dream</p>
+                    </li>
+                    <li class="musica__item">
+                        <picture>
+                            <source media="(min-width: 720px)" srcset="images/desktop-unplugged.jpg">
+                            <source media="(min-width: 375px)" srcset="images/mobile-unplugged.jpg">
+                            <img src="images/desktop-unplugged.jpg" alt="Album MTV unplugged">
+                        </picture>
+                        <p>MTV unplugged</p>
+                    </li>
+                    <li class="musica__item">
+                        <picture>
+                            <source media="(min-width: 720px)" srcset="images/desktop-one-of-the-boys.jpg">
+                            <source media="(min-width: 375px)" srcset="images/mobile-one-of-the-boys.jpg">
+                            <img src="images/desktop-one-of-the-boys.jpg" alt="Album One OF the Boys">
+                        </picture>
+                        <p>One Of the Boys</p>
+                    </li>
+                </ul>
+                <div class="musica__navigation">
+                    <label for="radio1" class="navigation-btn inactivo"></label>
+                    <label for="radio2" class="navigation-btn inactivo"></label>
+                    <label for="radio3" class="navigation-btn inactivo"></label>
+                    <label for="radio4" class="navigation-btn inactivo"></label>
+                    <label for="radio5" class="navigation-btn inactivo"></label>
+                    <label for="radio6" class="navigation-btn inactivo"></label>
                 </div>
             </div>
-            <div>
-                <label for="radio1"></label>
-                <label for="radio2"></label>
-                <label for="radio3"></label>
-                <label for="radio4"></label>
-            </div>
+            
         </section>
         <!-- TIENDA -->
-        <section>
-            <div>
+        <section class="tienda">
+            <div class="tienda__header">
                 <h2>Tienda</h2>
                 <a href="#">Ver más <i class="icon-chevron-right" aria-hidden="true"></i></a>
             </div>
-            <div>
-                <img src="images/Holiday-Desktop.jpg" alt="Tienda Cozy Little Christmas" width="1440" height="541">
-                <img src="images/holiday-katy-perry-mobile-compressed.jpg" alt="Tienda Cozy Little Christmas" width="375" height="660">
+            <div class="tienda__image-promo">
+                <picture>
+                    <source media="(min-width: 2560px)" srcset="images/Holiday-Desktop.jpg">
+                    <source media="(min-width: 960px)" srcset="images/Holiday-Desktop-V2.jpg">
+                    <source media="(min-width: 375px)" srcset="images/Holiday-mobile.jpg">
+                    <source media="(max-width: 375px)" srcset="images/Holiday-mobile.jpg">
+                    <img src="images/Holiday-Desktop.jpg" alt="Tienda Cozy Little Christmas" height="660">
+                </picture>
             </div>
-            <div>
+            <div class="tienda__nuevo">
                 <p>¡NUEVA MERCHANDISE!</p>
-                <div>
-                    <div>
+                <div class="tienda__nuevo-articulos">
+                    <div class="tienda__nuevo-articulo">
                         <img src="images/PlayShotglass.png" alt="play shot glass" width="300" height="300">
                         <p>Play Shot Glass</p>
                     </div>
-                    <div>
+                    <div class="tienda__nuevo-articulo">
                         <img src="images/PlayHat.png" alt="play hat" width="300" height="300">
                         <p>Play Dad Hat</p>
                     </div>
-                    <div>
+                    <div class="tienda__nuevo-articulo"> 
                         <img src="images/AdmatTee.png" alt="play admat t-shirt" width="300" height="300">
                         <p>Play Admat T-shirt</p>
                     </div>
@@ -163,39 +213,46 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div>
-            <img src="images/katyPerryPlayBlanco.png" alt="Katy Perry" width="280" height="30">
-            <nav>
-                <a href="#">
-                    <i class="icon-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="icon-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="icon-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="icon-instagram" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="icon-apple" aria-hidden="true"></i>
-                </a>
-                <a href="#">
-                    <i class="icon-apotify" aria-hidden="true"></i>
-                </a>
-            </nav>
-        </div>
-        <div>
-            <p>SUSCRIBETE AL BOLETIN DE NOTICIAS CON TU EMAIL</p>
-            <input type="email" placeholder="Email">
-            <div>
-                <input type="checkbox"> <label>Recibir alerta de eventos</label>
-                <input type="checkbox"> <label>Recibir alertas de tienda o nuevas ofertas</label>
+    <footer class="footer">
+        <img src="images/footerDeco.png" alt="footer">
+        <div class="footer__container">
+            <div class="footer__links">
+                <img src="images/katyPerryPlayBlanco.png" alt="Katy Perry" width="280" height="30">
+                <nav>
+                    <a href="#">
+                        <i class="icon-youtube" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-apple" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                        <i class="icon-spotify" aria-hidden="true"></i>
+                    </a>
+                </nav>
             </div>
-            <p>Terminos y condiciones</p>
-            <button>ENVIAR</button>
+            <div class="footer__boletin">
+                <p>SUSCRIBETE AL BOLETIN DE NOTICIAS CON TU EMAIL</p>
+                <input class="footer__email" type="email" placeholder="Email">
+                <div class="footer__checks">
+                    <div class="footer__check">
+                        <input type="checkbox"> <label>Recibir alerta de eventos</label>
+                    </div>
+                    <div class="footer__check">
+                        <input type="checkbox"> <label>Recibir alertas de tienda o nuevas ofertas</label>
+                    </div>   
+                </div>
+                <a><p>Terminos y condiciones</p></a>
+                <button class="btn btn-secondary">ENVIAR</button>
+            </div>
         </div>
     </footer>
 </body>

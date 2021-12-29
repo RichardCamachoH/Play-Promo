@@ -1,5 +1,5 @@
 a, button {
-	color: color( controls, base );
+	color: color( grayscale, white );
 	text-decoration: none;
 	outline: 0;
    transition: color .1s ease-out;
@@ -11,13 +11,13 @@ a, button {
    }
 
 	&:hover, &:focus {
-      color: color( controls, dark );
+      color: color( grayscale, gray-5 );
       @include mq-max(sm){
          text-decoration: none;
       }
    }
    &.underline-link{
-      color: color(controls,base);
+      color: color(grayscale, white);
       cursor: pointer;
       font-family: $font-primary;
       font-size: $font-size;
@@ -45,9 +45,9 @@ a, button {
          }
       }
       &.text-secondary-base {
-         color: color( secondary, base );
+         color: color( primary, base );
          &:hover {
-            color: color( secondary, dark );
+            color: color( primary, dark );
          }
       }
       &.text-primary-base{

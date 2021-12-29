@@ -3,33 +3,35 @@
    font-size: $font-size;
    padding: ( $font-size - .25rem ) ( $font-size + .9rem);
    border: none;
+   border-radius: 1rem;
    cursor: pointer;
    font-weight: 700;
    line-height: 1;
    outline: none;
-   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
+   // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.25);
    text-transform: uppercase;
    width: 100%;
    @include mq-min(md) {
-      width: auto;
+      // width: auto;
    }
    &.btn-primary {
-      @include button( color( primary, dark ) );
+      @include button( color( grayscale, gray-3 ), color( grayscale, base ) );
       &.outline {
-         @include button( transparent, color( primary, dark ) );
-         border: .13rem solid color( primary, dark );
+         @include button( transparent, color( grayscale, gray-3) );
+         border: .13rem solid color( grayscale, gray-3 );
          &:hover, &:active {
-            @include button( color( primary, dark ) );
+            @include button( color( grayscale, gray-3 ) );
          }
       }
    }
    &.btn-secondary {
-      @include button( color( secondary, base ), color( grayscale, base ) );
+      @include button( color( grayscale, white ), color( grayscale, base ) );
+      
       &.outline {
-         @include button( transparent, color( secondary, base ) );
-         border: .15rem solid color( secondary, base );
+         @include button( transparent, color( grayscale, base ) );
+         border: .15rem solid color( grayscale, base );
          &:hover, &:active {
-            @include button( color( secondary, base ), color( grayscale, white ));
+            @include button( color( grayscale, white ), color( grayscale, white ));
          }
       }
    }

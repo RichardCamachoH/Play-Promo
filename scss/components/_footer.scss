@@ -1,0 +1,191 @@
+.footer {
+    margin-top: 7rem;
+    font-size: map-get($sizes, "base_2");
+    
+    img {
+        max-width: 100%;
+        margin-bottom: -10px;
+    }
+
+    &__container{
+        background: color(primary, base);
+        color: color(grayscale, white);
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 2rem;
+    }
+
+    &__links {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+        order: 2;
+
+        nav{
+            margin-top: 5rem;
+            font-size: map-get($sizes, "half");
+
+            a:not(:last-child) {
+                cursor: pointer;
+                margin-right: 1.8rem;
+            }
+        }
+    }
+
+    &__boletin {
+        
+        p:nth-child(1){
+            line-height: 18px;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+    }
+
+    &__email {
+        border: none;
+        border-radius: 1rem;
+        color: color(grayscale, gray-5);
+        font-size: map-get($sizes, "base_2");
+        height: 6rem;
+        margin-bottom: 3rem;
+        padding-left: 2rem;
+        width: 100%;
+    }
+
+    &__checks {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3rem;
+
+        input {
+            height: 2rem;
+            width: 2rem;
+        }
+    }
+
+    &__check:nth-child(1){
+        margin-bottom: 1rem;
+    }
+
+    .btn {
+        font-size: map-get($sizes, "base_2");
+        height: 5rem;
+        padding: 1.6rem;
+    }
+}
+
+@include  mq-min(lg){
+
+    .footer {
+        margin-top: 14rem;
+
+        img{
+            margin-bottom: -13px;
+        }
+
+        &__container{
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 4rem 4rem;
+        }
+
+        &__links {
+            order: unset;
+            padding-top: 30px;
+            
+            img {
+                width: 35.4rem;
+                height: 3.8rem;
+            }
+            nav{
+                margin-top: 5rem;
+    
+                a:not(:last-child) {
+                    cursor: pointer;
+                    margin-right: 2rem;
+                }
+
+                i {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        &__boletin {
+            max-width: 50%;
+
+            p:nth-child(1){
+                line-height: 24px;
+            }
+        }
+
+        &__email {
+            font-size: map-get($sizes, "base_2");
+            margin-bottom: 5.2rem;
+        }
+
+        &__checks {
+            flex-direction: row;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            font-size: map-get($sizes, "base_2");
+            font-weight: map-get($weights, "regular");
+        }
+    }
+}
+
+@include  mq-min(xl){
+
+    .footer {
+
+        &__container{
+            padding: 4rem 6rem;
+        }
+
+        &__links {
+            
+            img {
+                width: 56.9rem;
+                height: 6.1rem;
+            }
+            nav{
+                margin-top: 5rem;
+                font-size: map-get($sizes, "half");
+    
+                a:not(:last-child) {
+                    cursor: pointer;
+                    margin-right: 4rem;
+                }
+
+                i {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        &__boletin {
+            max-width: 40%;
+
+            p:nth-child(1){
+                line-height: 24px;
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__email {
+            margin-bottom: 5.2rem;
+        }
+
+        &__checks {
+            flex-direction: row;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1.6rem;
+        }
+    }
+}
